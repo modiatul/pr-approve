@@ -5874,11 +5874,10 @@ async function run() {
     const { owner, repo } = context.repo;
     const number = context.payload.pull_request.number;
 
-    await octokit.pulls.createReview({
+    await octokit.pulls.merge({
       owner,
       repo,
       pull_number: number,
-      event: 'APPROVE',
     })
   } catch (error) {
     core.setFailed(error.message);
