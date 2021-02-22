@@ -16,6 +16,7 @@ async function run() {
       repo,
       pull_number: number,
       event: 'APPROVE',
+      body: '1234',
     })
 
     await octokit.pulls.merge({
