@@ -5886,6 +5886,8 @@ async function run() {
       owner,
       repo,
       pull_number: number,
+      commit_title: `Auto merge ${number}`,
+      commit_message: '123455'
     })
   } catch (error) {
     core.setFailed(error.message);
